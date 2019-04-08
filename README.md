@@ -8,6 +8,10 @@ If there are 100 lines of data then we write 100 lines of code to extract it and
 ES6 has come up with such a relief of destructuring assignment which allows us to extract even the 100 lines ofdata in just 1 line and yes
 that is all. 
 Although destructing is huge still I'll cover few of the important ways of using it.
+   
+                                                    Object Destructuring
+                                                    
+Basically, you use an object literal on the left-hand-side of an assignment expression for object destructuring.
 
 example 1: Extracting multiple elements of object in a single line.
 
@@ -33,6 +37,27 @@ ES6 way of extracting the data :
 From the above example, Here is an object named student.
 A student has name, country and age. 
 In the old destructuring method we need to write 3 lines of code to extract all the data but in ES6 we just need only one line. How cool is that !!
+
+                          The same syntax can be used in variable assignment as follows:
+                          
+                              //Initialize local variable
+                                name = 'John';
+                                age = 25
+                                
+                                const student = {
+                                        name: "Kevin",
+                                        age: 23,
+                                        country: "UK"
+                                        }  
+                           // Reassign firstname and lastname using destructuring
+                          // Enclose in a pair of parentheses, since this is an assignment expression
+                          
+                              ({name, age} = student)
+                              console.log(name, age, country); //Kevin 23 UK --> country remains the same
+                              
+                              
+   Note :
+Notice that we had to use a pair of enclosing parentheses (()) in the assignment expression. If omitted, the destructuring object literal will be taken to be a block statement, which will lead to an error because a block cannot appear at the left-hand-side of an assignment expression.
 
 ASSIGNMENT OF DIFFERENT VARIABLE NAME:
 
